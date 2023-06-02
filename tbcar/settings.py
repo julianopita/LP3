@@ -87,7 +87,7 @@ import dj_database_url
 DATABASE_URL = os.environ.get('DATABASE_URL')
 
 DATABASES = {
-    'default': dj_database_url.parse('postgres://tbcar_bp3028518_user:jwlwJJJBsITak32uQ9oo3wyk7rR1AD4F@dpg-chsjd5e4dad9mubb928g-a.oregon-postgres.render.com/tbcar_bp3028518')
+    'default': dj_database_url.parse('postgres://tbcar_bp3028518_user:jwlwJJJBsITak32uQ9oo3wyk7rR1AD4F@dpg-chsjd5e4dad9mubb928g-a/tbcar_bp3028518')
 }
 
 # Password validation
