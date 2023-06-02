@@ -25,8 +25,9 @@ SECRET_KEY = 'django-insecure-4y^u$+^ue4j*qnpi9ea079st^ffy#cny+7^38-yq(ra+*#$1z2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = [
+    'estacionamento-lp3.onrender.com',
+    ]
 # Application definition
 
 INSTALLED_APPS = [
