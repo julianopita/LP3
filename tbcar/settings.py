@@ -12,10 +12,6 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os
-import environ
-
-env = environ.Env()
-environ.Env.read_env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -81,10 +77,16 @@ WSGI_APPLICATION = 'tbcar.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+import environ
+
+env = environ.Env()
+environ.Env.read_env(os.path.join(BASE_DIR, 'env'))
+
 import dj_database_url
+DATABASE_URL = os.environ.get('DATABASE_URL')
 
 DATABASES = {
-    'default': dj_database_url.parse(dj_database_url.config('DATABASE_URL'))
+    'default': dj_database_url.parse('postgres://tbcar_bp3028518_user:jwlwJJJBsITak32uQ9oo3wyk7rR1AD4F@dpg-chsjd5e4dad9mubb928g-a.oregon-postgres.render.com/tbcar_bp3028518')
 }
 
 # Password validation
